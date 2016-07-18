@@ -10,11 +10,15 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate {
 
+    @IBOutlet var table: UITableView!
+    
     @IBOutlet var sliderValue: UISlider!
     
     @IBAction func sliderMoved(sender: AnyObject) {
         
         print(sliderValue)
+        
+        table.reloadData()
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
