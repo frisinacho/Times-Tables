@@ -24,11 +24,33 @@
                                     <action selector="sliderMoved:" destination="BYZ-38-t0r" eventType="valueChanged" id="d66-zE-bam"/>
                                 </connections>
                             </slider>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0J4-VF-PC8">
+                                <rect key="frame" x="0.0" y="66" width="320" height="502"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="RiU-c9-ivW">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RiU-c9-ivW" id="her-XJ-Iy9">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="t6l-jf-3qk"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="HEM-kF-8V2"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="qZT-O1-wl3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="3nm-5v-7hj"/>
+                            <constraint firstItem="0J4-VF-PC8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="GcN-ry-Jzg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0J4-VF-PC8" secondAttribute="trailing" constant="-20" id="HJO-wa-WW7"/>
                             <constraint firstItem="qZT-O1-wl3" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Nha-8T-siA"/>
+                            <constraint firstItem="0J4-VF-PC8" firstAttribute="top" secondItem="qZT-O1-wl3" secondAttribute="bottom" constant="8" id="QGj-U4-wHi"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0J4-VF-PC8" secondAttribute="bottom" id="TAn-49-DRy"/>
                             <constraint firstItem="qZT-O1-wl3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="h0y-ep-IK8"/>
                         </constraints>
                     </view>
